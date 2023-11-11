@@ -1,0 +1,6 @@
+@media screen (max-width: 500px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+	}
+}

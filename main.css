@@ -1,0 +1,100 @@
+* {
+	padding: 0%;
+	margin: 0%;
+}
+body {
+ font-family: sans-serif;
+ background: whitesmoke;
+ overflow-x: hidden;
+}
+.mn-cen-block {
+	display: flex;
+	justify-content: center;
+}
+.main {
+	display: block;
+	justify-content: center;
+	margin-top: 150px;
+	align-items: center;
+	position: relative;
+/*	transform: scale(1.2);*/
+	animation-name: button;
+	animation-duration: .3s ease;
+	animation-iteration-count: infinite;
+	border-radius: 10px;
+	overflow-y: scroll;
+	overflow: hidden;
+}
+.main{
+	background-color: lightslategray;
+	padding: 20px;
+	border: 3px solid #000000;
+}
+.main .accordeon {
+	border-bottom: 1px solid darkgray;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.top-info::before {
+	content: '';
+	position: absolute;
+	background-color: lightgray;
+	width: 0%;
+	height: 100%;
+	border-top: 1px solid black;
+	transition: .3s ease;
+	z-index: -1;
+	transform: translateY(-50px);
+}
+
+.main .top-info:hover::before {
+	width: 100%;
+	transition: .3s ease;
+	transform: translateY(0px);
+}
+.main .top-info {
+	background-color: black;
+	width: 400px;
+	height: 50px;
+	border-bottom: 2px solid black;
+	cursor: pointer;
+	border-top: none;
+	overflow: hidden;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	z-index: 2;
+}
+.main .top-info span:hover {
+	color: black;
+}
+.top-info {
+	position: relative;
+}
+.main .cont-acc {
+	background-color: lightgray;
+	width: 400px;
+	height: 0px;
+	overflow-y: scroll;
+	cursor: pointer;
+	border-top: none;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+/*.cont-acc::-webkit-scrollbar-thumb {
+	width: 10px;
+	background-color: lightgray;
+	border-radius: 50px;
+}*/
+.cont-acc::-webkit-scrollbar {
+	display: none;
+}
+.cont-acc p {
+	color: white;
+	margin-top: 10px;
+	margin-left: 10px;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+}
